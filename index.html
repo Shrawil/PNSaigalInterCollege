@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official website of PN Saigal Inter College. Get information on admissions, events, notices, and more.">
+  <meta name="keywords" content="PN Saigal Inter College, school, education, admissions, kanwakhera, inter, college, best college, sitapur, best schools in Sitapur, UP Board, Inter College, India">
+  <meta name="author" content="Shrawil Srivatava">
+  <title>Prag Narain Saigal Inter College</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+	html {
+		scroll-behavior: smooth;
+	}
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #1abc9c;
+    }
+
+    .hero {
+      height: 60vh;
+      background: linear-gradient(rgba(44,62,80,0.7), rgba(44,62,80,0.7)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    section {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    section[id] {
+      scroll-margin-top: 80px;
+    }
+    section h2 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid #1abc9c;
+      display: block;
+      padding-bottom: 0.1rem;
+    }
+
+    /* About */
+    .about p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 900px;
+    }
+
+    /* Notices */
+    .notices ul {
+      list-style: none;
+      padding-left: 1rem;
+      color: #444;
+    }
+    .notices ul li {
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+      padding-left: 0.75rem;
+      border-left: 4px solid #1abc9c;
+      cursor: default;
+    }
+    .notices ul li:hover {
+      background: #eafaf9;
+      border-left-color: #16a085;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    
+    #gallery h2 {
+      margin-bottom: 0.3rem;
+      padding-bottom: 0.05rem;
+    }
+    
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    .contact {
+      background: #1abc9c;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      box-shadow: 0 4px 8px rgba(26,188,156,0.4);
+    }
+    .contact h3 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    .contact p {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: #bdc3c7;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Prag Narain Saigal Inter College</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#notices">Notices</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Prag Narain Saigal Inter College</h1>
+    <p>Empowering students with knowledge and values for a bright future.</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      Prag Narain Saigal Inter College, Kanva Khera Sitapur, is committed to
+      delivering quality education and fostering holistic development in
+      students. We strive to create a nurturing environment that encourages
+      academic excellence, sportsmanship, and moral values.
+    </p>
+  </section>
+
+  <section id="notices" class="notices">
+    <h2>Important Notices</h2>
+    <ul>
+      <li>Admissions for session 2025-26 start from 1st June.</li>
+      <li>Annual Sports Day scheduled on 15th December.</li>
+      <li>Parent-Teacher Meeting on 10th November at 4 PM.</li>
+      <li>Winter vacation from 20th December to 5th January.</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD4EJ8cD5XSwbB63Nyv0UIxujBQ7x6zP-wQw&s" alt="School Building" />
+      <img src="https://livewire.thewire.in/wp-content/uploads/2020/07/6130697412_2a69e32777_k.jpg" alt="Classroom" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvXrYknHOzgi10D0rmm_s4FqXOEO7ngzWXg&s" alt="Students" />
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3>Contact Us</h3>
+    <p>Kanva Khera, Sitapur, Uttar Pradesh, India</p>
+    <p>Phone: +91-XXXXXXXXXX</p>
+    <p>Email: info@pragnarainsaigal.edu.in</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Prag Narain Saigal Inter College. All rights reserved.
+  </footer>
+
+</body>
+</html>
