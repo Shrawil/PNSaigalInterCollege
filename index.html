@@ -9,9 +9,9 @@
   <title>Prag Narain Saigal Inter College</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-	html {
-		scroll-behavior: smooth;
-	}
+    html {
+      scroll-behavior: smooth;
+    }
     * {
       box-sizing: border-box;
       margin: 0; padding: 0;
@@ -43,6 +43,7 @@
       list-style: none;
       display: flex;
       gap: 2rem;
+      flex-wrap: wrap;
     }
     nav ul li a {
       text-decoration: none;
@@ -75,31 +76,31 @@
       max-width: 700px;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
+
     section {
       max-width: 1100px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
+
     section[id] {
-      scroll-margin-top: 80px;
+      scroll-margin-top: 100px; /* fallback for browsers with smooth scroll */
     }
+
     section h2 {
       color: #2c3e50;
       font-size: 2rem;
       margin-bottom: 0.5rem;
       border-bottom: 2px solid #1abc9c;
-      display: block;
-      padding-bottom: 0.1rem;
+      padding-bottom: 0.2rem;
     }
 
-    /* About */
     .about p {
       font-size: 1.1rem;
       color: #555;
       max-width: 900px;
     }
 
-    /* Notices */
     .notices ul {
       list-style: none;
       padding-left: 1rem;
@@ -117,18 +118,12 @@
       border-left-color: #16a085;
     }
 
-    /* Gallery */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
     }
-    
-    #gallery h2 {
-      margin-bottom: 0.3rem;
-      padding-bottom: 0.05rem;
-    }
-    
+
     .gallery img {
       width: 100%;
       height: 200px;
@@ -143,7 +138,6 @@
       transform: scale(1.05);
     }
 
-    /* Contact */
     .contact {
       background: #1abc9c;
       color: white;
@@ -173,6 +167,18 @@
       user-select: none;
     }
 
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        gap: 1rem;
+        flex-direction: column;
+        padding-top: 1rem;
+      }
+    }
+
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 2rem;
@@ -180,8 +186,8 @@
       .hero p {
         font-size: 1rem;
       }
-      nav ul {
-        gap: 1rem;
+      .about p {
+        font-size: 1rem;
       }
     }
   </style>
@@ -192,10 +198,10 @@
     <div class="logo">Prag Narain Saigal Inter College</div>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#notices">Notices</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" onclick="scrollToSection('about'); return false;">About</a></li>
+        <li><a href="#notices" onclick="scrollToSection('notices'); return false;">Notices</a></li>
+        <li><a href="#gallery" onclick="scrollToSection('gallery'); return false;">Gallery</a></li>
+        <li><a href="#contact" onclick="scrollToSection('contact'); return false;">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -245,5 +251,13 @@
     &copy; 2025 Prag Narain Saigal Inter College. All rights reserved.
   </footer>
 
+  <script>
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  </script>
 </body>
 </html>
